@@ -8,11 +8,13 @@ const Buttton = ({ label, iconURL }) => {
       px-7 py-4 border border-coral-red font-montserrat text-lg leading-none text-white bg-coral-red rounded-full'
       >
         {label}
-        <img
-          src={iconURL}
-          alt='arrow right icon'
-          className='w-5 h-5 ml-2 rounded-full'
-        />
+        {iconURL && (
+          <img
+            src={iconURL}
+            alt='arrow right icon'
+            className='w-5 h-5 ml-2 rounded-full'
+          />
+        )}
       </button>
     </>
   )
