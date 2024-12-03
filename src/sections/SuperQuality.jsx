@@ -24,6 +24,7 @@ const SuperQuality = () => {
             <Buttton label='View details' />
           </div>
         </div>
+        {/* 图片大于容器宽度时，最大宽度为容器宽度，否则就是设置的大小 */}
         <div className='flex-1 flex items-center justify-center'>
           <img
             src={shoe8}
