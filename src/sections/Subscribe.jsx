@@ -3,7 +3,11 @@ import Buttton from '../components/Buttton'
 const Subscribe = () => {
   return (
     <>
-      <section className='max-container flex justify-between items-center max-lg:flex-col gap-10'>
+      {/* tailwind自带平滑过渡，设置带有锚点的#id */}
+      <section
+        id='contact-us'
+        className='max-container flex justify-between items-center max-lg:flex-col gap-10'
+      >
         <h3 className='lg:max-w-md leading-[68px] font-palanquin font-bold capitalize text-4xl'>
           sign up for <span className='text-coral-red'>updates</span> &
           newsletter

@@ -1,17 +1,18 @@
-import React, { useState } from 'react'
+import React, { forwardRef, useState } from 'react'
 import Buttton from '../components/Buttton'
 import { arrowRight } from '../assets/icons'
 import { shoes, statistics } from '../constants'
 
 import ShowCard from '../components/ShowCard'
 
-const Hero = () => {
+const Hero = forwardRef((props, ref) => {
   const [bigShowImg, setBigShowImg] = useState(shoes[0])
 
   return (
     <>
       {/* min-h-screen m-height:100vh */}
       <section
+        ref={ref}
         id='home'
         className='max-container min-h-screen w-full flex flex-col xl:flex-row justify-center gap-10'
       >
@@ -28,7 +29,7 @@ const Hero = () => {
                 在这种情况下，文本不会换行，
                 所有的空格会被合并成一个空格，直到文本超出容器宽度
             */}
-            <span className='relative pr-10 xl:bg-white xl:whitespace-nowrap z-10'>
+            <span className='relative pr-10 xl:bg-white xl:whitespace-nowrap z-8'>
               The New Arrival
             </span>
             <br />
@@ -80,6 +81,6 @@ const Hero = () => {
       </section>
     </>
   )
-}
+})
 
 export default Hero
