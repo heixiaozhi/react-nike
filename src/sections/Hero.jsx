@@ -62,7 +62,7 @@ const Hero = forwardRef((props, ref) => {
             alt='show collection'
             width={610}
             height={502}
-            className='relative z-10 object-contain'
+            className='relative z-8 object-contain'
           />
           <div className='absolute -bottom-[5%] sm:left-[10%] flex sm:gap-6 gap-4 max-sm:px-6'>
             {shoes.map((shoe) => {
