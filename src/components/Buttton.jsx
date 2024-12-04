@@ -1,15 +1,25 @@
 import React from 'react'
 
-const Buttton = ({ label, iconURL, color }) => {
+/*
+  封装Button按钮，支持自定义颜色
+*/
+const Buttton = ({
+  label,
+  iconURL,
+  backgroundColor,
+  textColor,
+  borderColor,
+  fullWidth,
+}) => {
   return (
     <>
       <button
         className={`flex justify-center items-center gap-2 
       px-7 py-4 font-montserrat text-lg leading-none ${
-        color != undefined
-          ? 'text-gray-400 bg-white border-gray-600'
+        backgroundColor
+          ? `${textColor} ${backgroundColor} ${borderColor}`
           : 'text-white bg-coral-red  border-coral-red'
-      }  border rounded-full`}
+      }  border rounded-full ${fullWidth}`}
       >
         {label}
         {iconURL && (
